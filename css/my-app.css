@@ -112,3 +112,11 @@
 .tabbar.theme-green a.active i {
   color: #000000;
 }
+
+.list-block .item-title.label {
+  width: auto;
+}
+
+.list-block .item-input {
+  width: auto;
+}
