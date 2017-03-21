@@ -19,85 +19,33 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
-
-$('#card').click(function() {
-  $('#subnavbar').css({display: 'none'});
-  $('#index').removeClass('with-subnavbar');
-  $('#card-active').css({display: 'inline'});
-  $('#request-add-button').css({display: 'block'})
+$('#tab-img__list').click(function() {
+    $(this).attr('src', 'img/List-Selected.png');
+    $('#tab-img__prior').attr('src', 'img/Priority.png');
+    $('#tab-img__pay').attr('src', 'img/Pay.png');
+    $('#tab-img__car').attr('src', 'img/Car.png');
 });
 
-$('#request-add-button').click(function () {
-    if ($('#request-c-item').css('display') == 'none') {
-        $('#request-c-item').slideDown('fast', function () {
-            var absoluteTopY = $("#dr-rubble-item").position().top;
-            $("#dr-address-tooltip").css("top", absoluteTopY + "px");
-            $("#dr-address-tooltip").slideDown("fast");
-            $('#dr-c-item input').focus();
-        });
-    }
+$('#tab-img__prior').click(function() {
+    $(this).attr('src', 'img/Priority-Selected.png');
+    $('#tab-img__list').attr('src', 'img/List.png');
+    $('#tab-img__pay').attr('src', 'img/Pay.png');
+    $('#tab-img__car').attr('src', 'img/Car.png');
 });
 
-function validate() {
-    var valid = true;
-    if (!$('#request-from-input').val().length) {
-        doRedPlaceHolder('#request-from-input');
-        valid = false;
-    }
-    if (!$('#request-to-input').val().length) {
-        doRedPlaceHolder('#request-to-input');
-        valid = false;
-    }
-    if ($('#request-c-item').css("display") != 'none' && !$('#request-c-input').val().length) {
-        doRedPlaceHolder('#request-c-input');
-        valid = false;
-    }
-    if (!$('#request-fare-input').val().length) {
-        doRedPlaceHolder('#request-fare-input');
-        $('#dr-rubble-input').attr('placeholder', 'Укажите вашу цену')
-        valid = false;
-    }
-    return valid;
-}
-
-function doRedPlaceHolder(id) {
-    $('head').append("<style>" + id + "::-webkit-input-placeholder {color:red;} ");
-    $('head').append(id + "::-moz-placeholder {color:red;} ");
-    $('head').append(id + ":-moz-placeholder {color:red;} ");
-    $('head').append(id + ":-ms-input-placeholder {color:red;}</style>");
-}
-
-$('#request-submit-btn').click(function() {
-  if (validate()) {
-    postToGoogle();
-    return;
-  }
+$('#tab-img__pay').click(function() {
+    $(this).attr('src', 'img/Pay-Selected.png');
+    $('#tab-img__prior').attr('src', 'img/Priority.png');
+    $('#tab-img__list').attr('src', 'img/List.png');
+    $('#tab-img__car').attr('src', 'img/Car.png');
 });
 
-function postToGoogle() {
-  var from = $$('#request-from-input').val();
-  var to = $$('#request-to-input').val();
-  var c = $$('#request-c-input').val();
-  var fare = $$('#request-fare-input').val();
-  var comment = $$('#request-entry-input"').val();
-
-  $$.ajax({
-      url: "https://docs.google.com/forms/d/e/1FAIpQLScmSqa1ZLmS0afkgHs3n-ePFjJglKnQW56MOsNWjubF7XUVcw/formResponse",
-      data: {"entry.2142436256" : from, "entry.1450525195" : to, "entry.1593265994": c, "entry.775787382": fare, "entry.620574800": comment},
-      type: "POST",
-      dataType: 'jsonp',
-      statusCode: {
-          0: function (){
-
-              //Success message
-          },
-          200: function (){
-
-              //Success Message
-          }
-      }
-    });
-}
+$('#tab-img__car').click(function() {
+    $(this).attr('src', 'img/Car-Selected.png');
+    $('#tab-img__prior').attr('src', 'img/Priority.png');
+    $('#tab-img__pay').attr('src', 'img/Pay.png');
+    $('#tab-img__list').attr('src', 'img/List.png');
+});
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
