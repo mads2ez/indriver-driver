@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>inDriver</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.min.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+    async defer></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="theme-green">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <!-- Right panel with cover effect-->
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+
+        <!-- Top Navbar-->
+        <div class="navbar" id="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only open-panel"><img src="img/hamburger.png"/></a>
+            </div>
+            <div class="center"><img src="img/inDriver-logo.png"></img></div>
+          </div>
+        </div>
+
+        <div class="toolbar tabbar tabbar-labels">
+          <div class="toolbar-inner">
+              <a href="#tab1" class="tab-link ">
+                  <i class="icon demo-icon-1"><img src="img/List.png" alt=""></i>
+                  <span class="tabbar-label">Заказы</span>
+              </a>
+              <a href="#tab2" class="tab-link active">
+                  <i class="icon demo-icon-2"><img src="img/Priority.png" alt=""></i>
+                  <span class="tabbar-label">Приоритет</span>
+              </a>
+              <a href="#tab3" class="tab-link">
+                  <i class="icon demo-icon-3"><img src="img/Pay.png" alt=""></i>
+                  <span class="tabbar-label">Оплата</span>
+              </a>
+              <a href="#tab4" class="tab-link">
+                  <i class="icon demo-icon-4"><img src="img/Car.png" alt=""></i>
+                  <span class="tabbar-label">Профиль</span>
+              </a>
+          </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through tabbar-labels-fixed">
+          <!-- Page, data-page contains page name-->
+          <div data-page="index" class="page" id="index">
+            <div class="tabs">
+            <div id="tab2" class="tab active">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+
+              <div class="tab-header">
+                <div class="pr-header">
+                  <div class="pr-header__priority">75,3<i class="icon demo-icon-4"></i></div>
+                  <div class="pr-header__label">ваш приоритет</div>
+                </div>
+                <div class="pr-content">
+                  <div class="pr-left">
+                    <div class="pr-number">412</div>
+                    <div class="pr-text">поездок</div>
+                  </div>
+                  <div class="pr-center">
+                    <div class="pr-number">32</div>
+                    <div class="pr-text">оценок</div>
+                  </div>
+                  <div class="pr-right">
+                    <div class="pr-number">12</div>
+                    <div class="pr-text">монет</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="card card-news">
+                <div class="card-header no-border">Новый вид для водительского режима!<span class="card-date">29.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">Добавили вкладки Приоритет, Оплата и Профиль для быстрого доступа. Ждем ваших отзывов!</div>
+                  <button class="card-button">Написать отзыв</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header no-border">Хорошо поработали!<span class="card-date">29.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">Вы совершили 3 поездки<br>Получили 3 оценки<br>Ваш приоритет повысился на 0.2 балла</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header no-border">Отлично, так держать!<span class="card-date">28.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">Вы совершили 3 поездки<br>Получили 3 оценки<br>Ваш приоритет повысился на 0.2 балла</div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header no-border">Андрей, вы прошли регистрациюю<span class="card-date">27.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">Начинайте зарабатывать с inDriver!</div>
+                </div>
+                <button class="card-button">Посмотреть заказы</button>
+              </div>
+
+            </div>
+          </div>
+
+        <div id="tab3" class="tab">
+        <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="tab-header">
+              <div class="pr-header">
+                <div class="pr-header__priority">12</div>
+                <div class="pr-header__label">монет<br>на счету</div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <p><a href="#" class="button button-round active">Активировать смену</a></p>
+                  <p><a href="#" class="button button-round active">Пополнить счет</a></p>
+                  <p><a href="#" class="button button-round active">Межгород: уведомления</a></p>
+                  <p><a href="#" class="button button-round">Правила перевозки</a></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div id="tab4" class="tab">
+        <!-- Scrollable page content-->
+          <div class="page-content">
+            <div class="card facebook-card">
+              <div class="card-header no-border">
+                <div class="facebook-avatar"><img src="img/Icon.png" width="34" height="34"></div>
+                <div class="facebook-name">Константин Константинопольский</div>
+              </div>
+              <div class="card-content">
+                <div class="card-content-inner">Toyota Land Cruiser Prado, черный, А001АА</div>
+                <button class="card-button">Редактировать</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header no-border">Опции авто</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <div class="list-block">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Микроавтобус</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Детское кресло</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Кондиционер</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Не курю</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>
