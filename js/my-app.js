@@ -19,33 +19,33 @@ myApp.onPageInit('about', function (page) {
     });
 });
 
-$('#tab-img__list').click(function() {
-    $(this).attr('src', 'img/List-Selected.png');
-    $('#tab-img__prior').attr('src', 'img/Priority.png');
-    $('#tab-img__pay').attr('src', 'img/Pay.png');
-    $('#tab-img__car').attr('src', 'img/Car.png');
-});
-
-$('#tab-img__prior').click(function() {
-    $(this).attr('src', 'img/Priority-Selected.png');
-    $('#tab-img__list').attr('src', 'img/List.png');
-    $('#tab-img__pay').attr('src', 'img/Pay.png');
-    $('#tab-img__car').attr('src', 'img/Car.png');
-});
-
-$('#tab-img__pay').click(function() {
-    $(this).attr('src', 'img/Pay-Selected.png');
-    $('#tab-img__prior').attr('src', 'img/Priority.png');
-    $('#tab-img__list').attr('src', 'img/List.png');
-    $('#tab-img__car').attr('src', 'img/Car.png');
-});
-
-$('#tab-img__car').click(function() {
-    $(this).attr('src', 'img/Car-Selected.png');
-    $('#tab-img__prior').attr('src', 'img/Priority.png');
-    $('#tab-img__pay').attr('src', 'img/Pay.png');
-    $('#tab-img__list').attr('src', 'img/List.png');
-});
+// $('.tab-link').click(function() {
+//     $(this).closest( "img" ).attr('src', 'img/List-Selected.png');
+//     $('#tab-img__prior').attr('src', 'img/Priority.png');
+//     $('#tab-img__pay').attr('src', 'img/Pay.png');
+//     $('#tab-img__car').attr('src', 'img/Car.png');
+// });
+//
+// $('.tab-link').click(function() {
+//     $(this).closest('img').attr('src', 'img/Priority-Selected.png');
+//     $('#tab-img__list').attr('src', 'img/List.png');
+//     $('#tab-img__pay').attr('src', 'img/Pay.png');
+//     $('#tab-img__car').attr('src', 'img/Car.png');
+// });
+//
+// $('.tab-link').click(function() {
+//     $(this).closest( "img" ).attr('src', 'img/Pay-Selected.png');
+//     $('#tab-img__prior').attr('src', 'img/Priority.png');
+//     $('#tab-img__list').attr('src', 'img/List.png');
+//     $('#tab-img__car').attr('src', 'img/Car.png');
+// });
+//
+// $('.tab-link').click(function() {
+//     $(this).closest( "img" ).attr('src', 'img/Car-Selected.png');
+//     $('#tab-img__prior').attr('src', 'img/Priority.png');
+//     $('#tab-img__pay').attr('src', 'img/Pay.png');
+//     $('#tab-img__list').attr('src', 'img/List.png');
+// });
 
 // Generate dynamic page
 var dynamicPageIndex = 0;
