@@ -24,6 +24,7 @@
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
     <!-- Right panel with cover effect-->
+
     <!-- Views-->
     <div class="views">
       <!-- Your main view, should have "view-main" class-->
@@ -60,18 +61,39 @@
           </div>
         </div>
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-through toolbar-through">
+        <div class="pages navbar-through">
           <!-- Page, data-page contains page name-->
           <div data-page="index" class="page" id="index">
+
+            <div class="card-popup">
+              <div class="c-bg"></div>
+              <div class="card c-popup" id='card'>
+                <div class="card-header no-border c-popup-header">Ваш баланс: 5 монет</div>
+                <div class="card-content">
+                <div class="card-content-inner">
+                  <p class="c-popup-p">Чтобы начать работать, необходимо пополнить счет.<br>Выберите способ</p>
+                  <div class="card-popup__btn">
+                    <a href="about.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">Платежный терминалы</a>
+                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">С баланса телефона</a>
+                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-bank">Банковская карта</a>
+                    <a href="#" class="button button-big c-button-link">Другие способы <img src="img/Arrow.png" width="10"></a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
 
             <!-- Scrollable page content-->
           <div class="page-content tabs infinite-scroll">
             <div id="tab1" class="tab active">
+
+
+
             <!-- Scrollable page content-->
               <div class="list-block media-list">
                 <ul>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content open-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Айталина</p>
@@ -281,7 +303,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Жанна</p>
@@ -300,7 +322,10 @@
                 </ul>
               </div>
 
+
+
             </div>
+
 
 
             <div id="tab2" class="tab">
@@ -387,8 +412,8 @@
         <!-- Scrollable page content-->
             <div class="card facebook-card">
               <div class="card-header no-border fb-card">
-                <div class="facebook-avatar"><img src="img/User.png" width="34" height="34"></div>
-                <div class="facebook-name">Андрей Максимов</div>
+                <div class="facebook-avatar"><img class="driver-photo" src="img/driver.jpg" width="34" height="34"></div>
+                <div class="facebook-name">Захаров Поликарп	</div>
               </div>
               <div class="card-content">
                 <div class="card-content-inner">Toyota Land Cruiser Prado, черный, А001АА</div>

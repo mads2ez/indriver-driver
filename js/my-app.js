@@ -17,8 +17,13 @@ myApp.onPageInit('about', function (page) {
     $$('.create-page').on('click', function () {
         createContentPage();
     });
+    $$('.card-popup').hide();
 });
 
+$$('.create-popup').on('click', function (e) {
+  e.preventDefault();
+  $$('.card-popup').show();
+});
 // $('.tab-link').click(function() {
 //     $(this).closest( "img" ).attr('src', 'img/List-Selected.png');
 //     $('#tab-img__prior').attr('src', 'img/Priority.png');

@@ -155,3 +155,41 @@
 .facebook-name {
   margin-left: 10px;
 }
+
+.card-popup {
+  display: none;
+}
+
+.c-popup {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 95%;
+  margin-bottom: 50px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 11000;
+}
+
+.c-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+.c-popup-btn {
+  margin-bottom: 10px;
+}
+
+.c-popup-header {
+  font-weight: normal;
+  text-align: center;
+}
+
+.c-popup-p {
+  text-align: center;
+}
