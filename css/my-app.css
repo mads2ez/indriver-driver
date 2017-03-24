@@ -185,6 +185,10 @@
   margin-bottom: 10px;
 }
 
+.c-button-link {
+  margin: 0 auto;
+}
+
 .c-popup-header {
   font-weight: normal;
   text-align: center;

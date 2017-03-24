@@ -38,28 +38,9 @@
           </div>
         </div>
 
-        <div class="toolbar tabbar tabbar-labels">
-          <div class="toolbar-inner">
-              <a href="#tab1" class="tab-link active">
-                  <i class="icon demo-icon-1"><img id="tab-img__list" src="img/List.png" alt=""></i>
-                  <span class="tabbar-label">Заказы</span>
-              </a>
-              <a href="#tab2" class="tab-link">
-                  <i class="icon demo-icon-2"><img id="tab-img__prior" src="img/Priority.png" alt=""></i>
-                  <span class="tabbar-label">Приоритет</span>
-              </a>
-              <a href="#tab3" class="tab-link">
-                  <i class="icon demo-icon-3"><img id="tab-img__pay" src="img/Pay.png" alt=""></i>
-                  <span class="tabbar-label">Оплата</span>
-              </a>
-              <a href="#tab4" class="tab-link">
-                  <i class="icon demo-icon-4"><img id="tab-img__car" src="img/Car.png" alt=""></i>
-                  <span class="tabbar-label">Профиль</span>
-              </a>
-          </div>
-        </div>
+
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-fixed">
+        <div class="pages navbar-fixed toolbar-fixed">
           <!-- Page, data-page contains page name-->
           <div data-page="index" class="page" id="index">
 
@@ -74,7 +55,7 @@
                     <a href="about.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">Платежный терминалы</a>
                     <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">С баланса телефона</a>
                     <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-bank">Банковская карта</a>
-                    <a href="#" class="button button-big c-button-link">Другие способы <img src="img/Arrow.png" width="10"></a>
+                    <a href="#" class="list-button c-button-link">Другие способы <img src="img/Arrow.png" width="10"></a>
                   </div>
                 </div>
                 </div>
@@ -83,6 +64,7 @@
 
             <!-- Scrollable page content-->
           <div class="page-content tabs infinite-scroll">
+
             <div id="tab1" class="tab active">
 
 
@@ -488,6 +470,27 @@
             </div>
           </div>
 
+</div>
+
+<div class="toolbar tabbar tabbar-labels">
+  <div class="toolbar-inner">
+      <a href="#tab1" class="tab-link active">
+          <i class="icon demo-icon-1"><img id="tab-img__list" src="img/List.png" alt=""></i>
+          <span class="tabbar-label">Заказы</span>
+      </a>
+      <a href="#tab2" class="tab-link">
+          <i class="icon demo-icon-2"><img id="tab-img__prior" src="img/Priority.png" alt=""></i>
+          <span class="tabbar-label">Приоритет</span>
+      </a>
+      <a href="#tab3" class="tab-link">
+          <i class="icon demo-icon-3"><img id="tab-img__pay" src="img/Pay.png" alt=""></i>
+          <span class="tabbar-label">Оплата</span>
+      </a>
+      <a href="#tab4" class="tab-link">
+          <i class="icon demo-icon-4"><img id="tab-img__car" src="img/Car.png" alt=""></i>
+          <span class="tabbar-label">Профиль</span>
+      </a>
+  </div>
 </div>
         </div>
         </div>
