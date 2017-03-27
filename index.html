@@ -44,7 +44,8 @@
           <!-- Page, data-page contains page name-->
           <div data-page="index" class="page" id="index">
 
-            <div class="card-popup">
+            <!-- popup windows -->
+            <div class="card-popup-topup">
               <div class="c-bg"></div>
               <div class="card c-popup" id='card'>
                 <div class="card-header no-border c-popup-header">Ваш баланс: 5 монет</div>
@@ -52,10 +53,27 @@
                 <div class="card-content-inner">
                   <p class="c-popup-p">Чтобы начать работать, необходимо пополнить счет.<br>Выберите способ</p>
                   <div class="card-popup__btn">
-                    <a href="about.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">Платежный терминалы</a>
-                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">С баланса телефона</a>
-                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-bank">Банковская карта</a>
+                    <a href="payment-terminals.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">Платежный терминалы</a>
+                    <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">С баланса телефона</a>
+                    <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-bank">Банковская карта</a>
                     <a href="#" class="list-button c-button-link">Другие способы <img src="img/Arrow.png" width="10"></a>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-popup-activateshift">
+              <div class="c-bg"></div>
+              <div class="card c-popup" id='card2'>
+                <div class="card-header no-border c-popup-header">Ваш баланс: 100 монет</div>
+                <div class="card-content">
+                <div class="card-content-inner">
+                  <p class="c-popup-p">Активируйте период</p>
+                  <div class="card-popup__btn">
+                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">8 часов - 29 монет</a>
+                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">4 часа - 19 монет</a>
+                    <a href="#" class="list-button c-button-link">Другие периоды <img src="img/Arrow.png" width="10"></a>
                   </div>
                 </div>
                 </div>

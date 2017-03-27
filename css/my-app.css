@@ -156,7 +156,11 @@
   margin-left: 10px;
 }
 
-.card-popup {
+.card-popup-topup {
+  display: none;
+}
+
+.card-popup-activateshift {
   display: none;
 }
 
@@ -196,4 +200,8 @@
 
 .c-popup-p {
   text-align: center;
+}
+
+.instructions-img {
+  width: 100%;
 }

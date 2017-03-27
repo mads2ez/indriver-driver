@@ -12,18 +12,30 @@ var mainView = myApp.addView('.view-main', {
 });
 
 // Callbacks to run specific code for specific pages, for example for About page:
-myApp.onPageInit('about', function (page) {
+myApp.onPageInit('payment', function (page) {
     // run createContentPage func after link was clicked
     $$('.create-page').on('click', function () {
         createContentPage();
     });
-    $$('.card-popup').hide();
+    $$('.card-popup-topup').hide();
+    $$('.card-popup-activateshift').hide();
 });
 
 $$('.create-popup').on('click', function (e) {
   e.preventDefault();
-  $$('.card-popup').show();
+  $$('.card-popup-topup').show();
 });
+
+$$('.c-bg').on('click', function (e) {
+  e.preventDefault();
+  $$('.card-popup-topup').hide();
+  $$('.card-popup-activateshift').hide();
+});
+
+var returnToIndex = myApp.onPageInit('index', function (page) {
+  $$('.card-popup-activateshift').show();
+});
+
 // $('.tab-link').click(function() {
 //     $(this).closest( "img" ).attr('src', 'img/List-Selected.png');
 //     $('#tab-img__prior').attr('src', 'img/Priority.png');
