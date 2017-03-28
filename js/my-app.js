@@ -39,6 +39,7 @@ $$('#showtoast').on('click', function(e) {
 });
 
 function openModal() {
+  console.log('openmodal');
   if (getAllUrlParams(document.URL).paid === true) {
     console.log("11");
     $$('.card-popup-activateshift').show();
