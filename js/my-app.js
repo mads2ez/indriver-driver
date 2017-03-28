@@ -13,8 +13,9 @@ var mainView = myApp.addView('.view-main', {
 });
 
 myApp.onPageInit('index', function (page) {
-    console.log(page.query);
-    openModal();
+  if (page.query.paid === 1) {
+    $$('.card-popup-activateshift').show();
+  }
 });
 
 myApp.init();
@@ -36,91 +37,83 @@ $$('.c-bg').on('click', function (e) {
   $$('.card-popup-activateshift').hide();
 });
 
-// myApp.onPageBeforeInit('index', function (page) {
-//   console.log('init ' + getAllUrlParams(document.URL).paid);
-//   if (getAllUrlParams(document.URL).paid === "1") {
-//     console.log('modal show' + getAllUrlParams(document.URL).paid);
-//     $$('.card-popup-activateshift').show();
-//   }
-// });
-
 $$('#showtoast').on('click', function(e) {
   $$('.card-popup-activateshift').hide();
   $('.toast').fadeIn(400).delay(3000).fadeOut(400)
 });
 
-function openModal() {
-  console.log('openmodal');
-  if (page.query != null) {
-    console.log("done");
-    $$('.card-popup-activateshift').show();
-  }
-  else {
-    console.log('else');
-  }
-}
+// function openModal() {
+//   console.log('openmodal');
+//   if (getAllUrlParams(document.URL).paid === 1) {
+//     console.log("done");
+//     $$('.card-popup-activateshift').show();
+//   }
+//   else {
+//     console.log('else');
+//   }
+// }
 
-function getAllUrlParams(url) {
-
-  // get query string from url (optional) or window
-  var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
-
-  // we'll store the parameters here
-  var obj = {};
-
-  // if query string exists
-  if (queryString) {
-
-    // stuff after # is not part of query string, so get rid of it
-    queryString = queryString.split('#')[0];
-
-    // split our query string into its component parts
-    var arr = queryString.split('&');
-
-    for (var i=0; i<arr.length; i++) {
-      // separate the keys and the values
-      var a = arr[i].split('=');
-
-      // in case params look like: list[]=thing1&list[]=thing2
-      var paramNum = undefined;
-      var paramName = a[0].replace(/\[\d*\]/, function(v) {
-        paramNum = v.slice(1,-1);
-        return '';
-      });
-
-      // set parameter value (use 'true' if empty)
-      var paramValue = typeof(a[1])==='undefined' ? true : a[1];
-
-      // (optional) keep case consistent
-      paramName = paramName.toLowerCase();
-      paramValue = paramValue.toLowerCase();
-
-      // if parameter name already exists
-      if (obj[paramName]) {
-        // convert value to array (if still string)
-        if (typeof obj[paramName] === 'string') {
-          obj[paramName] = [obj[paramName]];
-        }
-        // if no array index number specified...
-        if (typeof paramNum === 'undefined') {
-          // put the value on the end of the array
-          obj[paramName].push(paramValue);
-        }
-        // if array index number specified...
-        else {
-          // put the value at that index number
-          obj[paramName][paramNum] = paramValue;
-        }
-      }
-      // if param name doesn't exist yet, set it
-      else {
-        obj[paramName] = paramValue;
-      }
-    }
-  }
-
-  return obj;
-}
+// function getAllUrlParams(url) {
+//
+//   // get query string from url (optional) or window
+//   var queryString = url ? url.split('?')[1] : window.location.search.slice(1);
+//
+//   // we'll store the parameters here
+//   var obj = {};
+//
+//   // if query string exists
+//   if (queryString) {
+//
+//     // stuff after # is not part of query string, so get rid of it
+//     queryString = queryString.split('#')[0];
+//
+//     // split our query string into its component parts
+//     var arr = queryString.split('&');
+//
+//     for (var i=0; i<arr.length; i++) {
+//       // separate the keys and the values
+//       var a = arr[i].split('=');
+//
+//       // in case params look like: list[]=thing1&list[]=thing2
+//       var paramNum = undefined;
+//       var paramName = a[0].replace(/\[\d*\]/, function(v) {
+//         paramNum = v.slice(1,-1);
+//         return '';
+//       });
+//
+//       // set parameter value (use 'true' if empty)
+//       var paramValue = typeof(a[1])==='undefined' ? true : a[1];
+//
+//       // (optional) keep case consistent
+//       paramName = paramName.toLowerCase();
+//       paramValue = paramValue.toLowerCase();
+//
+//       // if parameter name already exists
+//       if (obj[paramName]) {
+//         // convert value to array (if still string)
+//         if (typeof obj[paramName] === 'string') {
+//           obj[paramName] = [obj[paramName]];
+//         }
+//         // if no array index number specified...
+//         if (typeof paramNum === 'undefined') {
+//           // put the value on the end of the array
+//           obj[paramName].push(paramValue);
+//         }
+//         // if array index number specified...
+//         else {
+//           // put the value at that index number
+//           obj[paramName][paramNum] = paramValue;
+//         }
+//       }
+//       // if param name doesn't exist yet, set it
+//       else {
+//         obj[paramName] = paramValue;
+//       }
+//     }
+//   }
+//
+//   return obj;
+// }
 
 // Generate dynamic page
 // var dynamicPageIndex = 0;
