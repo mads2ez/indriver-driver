@@ -60,7 +60,11 @@
                     <a href="payment-terminals.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">Платежный терминалы</a>
                     <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">С баланса телефона</a>
                     <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-bank">Банковская карта</a>
-                    <a href="#" class="list-button c-button-link">Другие способы <img src="img/Arrow.png" width="10"></a>
+                    <a href="#" class="button button-round button-arrow">Другие способы <img src="img/Arrow.png" width="10"></a>
+                    <div class="hidden">
+                      <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">Евросеть/Связной</a>
+                      <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">Сбербанк Онлайн</a>
+                    </div>
                   </div>
                 </div>
                 </div>
@@ -75,9 +79,13 @@
                 <div class="card-content-inner">
                   <p class="c-popup-p">Активируйте период</p>
                   <div class="card-popup__btn">
-                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn showtoast" id="showtoast">8 часов - 29 монет</a>
-                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn showtoast" id="showtoast">4 часа - 19 монет</a>
-                    <a href="#" class="list-button c-button-link">Другие периоды <img src="img/Arrow.png" width="10"></a>
+                    <p><a href="#" class="button button-big button-round active form-from-json c-popup-btn showtoast" id="showtoast">14 часов - 39 монет</a></p>
+                    <p><a href="#" class="button button-big button-round active form-from-json c-popup-btn showtoast" id="showtoast">8 часа - 29 монет</a></p>
+                    <p><a href="#" class="button button-round button-arrow">Другие периоды <img src="img/Arrow.png" width="10"></a></p>
+                    <div class="hidden">
+                      <p><a href="#" class="button button-big button-round active form-from-json c-popup-btn showtoast" id="showtoast">4 часов - 19 монет</a></p>
+                      <p><a href="#" class="button button-big button-round active form-from-json c-popup-btn showtoast" id="showtoast">1 часа - 7 монет</a></p>
+                    </div>
                   </div>
                 </div>
                 </div>
@@ -398,15 +406,22 @@
           </div>
 
           <div class="card">
+            <div class="card-header no-border">Пополнить счет</div>
             <div class="card-content">
               <div class="card-content-inner">
-                <p><a href="#" class="button button-round active">Активировать смену</a></p>
-                <p><a href="#" class="button button-round active">Пополнить счет</a></p>
-                <p><a href="#" class="button button-round active">Межгород: уведомления</a></p>
-                <p><a href="#" class="button button-round">Правила перевозки</a></p>
+                <p><a href="pay-options.html" class="button button-big button-round active">100 монет - 460 Руб.<br>Экономия - 10%</a></p>
+                <p><a href="pay-options.html" class="button button-big button-round active">100 монет - 460 Руб.<br>Экономия - 10%</a></p>
+                <p><a href="#" class="button button-round button-arrow">Другие пакеты <img src="img/Arrow.png" width="10"></a></p>
+                <div class="hidden">
+                  <p><a href="pay-options.html" class="button button-big button-round active">100 монет - 460 Руб.<br>Экономия - 10%</a></p>
+                  <p><a href="pay-options.html" class="button button-big button-round active">100 монет - 460 Руб.<br>Экономия - 10%</a></p>
+                </div>
               </div>
             </div>
           </div>
+
+          <p><a href="#" class="button button-round no-arrow">История платежей</a></p>
+          <p><a href="#" class="button button-round no-arrow">Рекомендуемые правила</a></p>
 
         </div>
 

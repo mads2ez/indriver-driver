@@ -18,6 +18,10 @@ myApp.onPageInit('index', function (page) {
     $$('.card-popup-activateshift').show();
   }
 
+  if (page.query.tab == 3) {
+    myApp.showTab('#tab3');
+  }
+
   $$('.c-popup-btn').on('click', function() {
     $$('.card-popup-topup').hide();
     $$('.card-popup-activateshift').hide();
@@ -39,6 +43,12 @@ myApp.onPageInit('index', function (page) {
     e.preventDefault();
     $$('.card-popup-activateshift').hide();
     $('.toast').fadeIn(400).delay(3000).fadeOut(400)
+  });
+
+  $$('.button-arrow').on('click', function() {
+    $$(this).hide();
+    $$(this).parent().next('.hidden').show();
+    $$(this).next('.hidden').show();
   });
 });
 

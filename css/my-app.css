@@ -189,10 +189,6 @@
   margin-bottom: 10px;
 }
 
-.c-button-link {
-  margin: 0 auto;
-}
-
 .c-popup-header {
   font-weight: normal;
   text-align: center;
@@ -216,4 +212,20 @@
   padding: 0 20px;
   z-index: 10500;
   transform: translateX(-50%);
+}
+
+.button-arrow {
+  border: none;
+}
+
+.no-arrow {
+  border: none;
+}
+
+.content-block {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
 }
