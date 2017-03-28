@@ -13,6 +13,7 @@ var mainView = myApp.addView('.view-main', {
 });
 
 myApp.onPageInit('index', function (page) {
+    console.log(page.query);
     openModal();
 });
 
