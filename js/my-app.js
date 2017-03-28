@@ -16,8 +16,12 @@ myApp.onPageInit('payment', function (page) {
     $$('.card-popup-activateshift').hide();
 });
 
+myApp.onPageInit('index', function (page) {
+    openModal();
+});
+
+
 $$('.create-popup').on('click', function (e) {
-  e.preventDefault();
   $$('.card-popup-topup').show();
 });
 
@@ -41,16 +45,14 @@ $$('#showtoast').on('click', function(e) {
 
 function openModal() {
   console.log('openmodal');
-  if (getAllUrlParams(document.URL).paid === true) {
-    console.log("11");
+  if (getAllUrlParams(document.URL).paid === 1) {
+    console.log("done");
     $$('.card-popup-activateshift').show();
   }
   else {
-    console.log('sd');
+    console.log('else');
   }
 }
-
-openModal();
 
 function getAllUrlParams(url) {
 
