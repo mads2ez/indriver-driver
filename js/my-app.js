@@ -32,7 +32,7 @@ $$('.c-bg').on('click', function (e) {
 });
 
 myApp.onPageBeforeInit('index', function (page) {
-  console.log('init');
+  console.log('init ' + getAllUrlParams(document.URL).paid);
   if (getAllUrlParams(document.URL).paid === "1") {
     console.log('modal show' + getAllUrlParams(document.URL).paid);
     $$('.card-popup-activateshift').show();
