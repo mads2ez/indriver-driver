@@ -13,7 +13,8 @@ var mainView = myApp.addView('.view-main', {
 });
 
 myApp.onPageInit('index', function (page) {
-  if (page.query.paid === 1) {
+  console.log(page.query.paid);
+  if (page.query.paid == 1) {
     $$('.card-popup-activateshift').show();
   }
 });
