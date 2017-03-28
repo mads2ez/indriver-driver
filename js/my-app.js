@@ -25,8 +25,6 @@ myApp.onPageInit('payment', function (page) {
 });
 
 
-
-
 $$('.create-popup').on('click', function (e) {
   $$('.card-popup-topup').show();
 });
