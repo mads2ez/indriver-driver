@@ -27,8 +27,9 @@ $$('.c-bg').on('click', function (e) {
   $$('.card-popup-activateshift').hide();
 });
 
-myApp.onPageAfterAnimation('index', function (page) {
-  if (getAllUrlParams().paid === true) {
+myApp.onPageBeforeInit('index', function (page) {
+  console.log('init');
+  if (getAllUrlParams(document.URL).paid === "1") {
     $$('.card-popup-activateshift').show();
   }
 });
