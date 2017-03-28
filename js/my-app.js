@@ -1,5 +1,7 @@
 // Initialize your app
-var myApp = new Framework7();
+var myApp = new Framework7({
+  init: false //Disable App's automatic initialization
+});
 
 // Export selectors engine
 var $$ = Dom7;
@@ -10,15 +12,19 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+myApp.onPageInit('index', function (page) {
+    openModal();
+});
+
+myApp.init();
+
 // Callbacks to run specific code for specific pages, for example for About page:
 myApp.onPageInit('payment', function (page) {
     $$('.card-popup-topup').hide();
     $$('.card-popup-activateshift').hide();
 });
 
-myApp.onPageInit('index', function (page) {
-    openModal();
-});
+
 
 
 $$('.create-popup').on('click', function (e) {
@@ -31,13 +37,13 @@ $$('.c-bg').on('click', function (e) {
   $$('.card-popup-activateshift').hide();
 });
 
-myApp.onPageBeforeInit('index', function (page) {
-  console.log('init ' + getAllUrlParams(document.URL).paid);
-  if (getAllUrlParams(document.URL).paid === "1") {
-    console.log('modal show' + getAllUrlParams(document.URL).paid);
-    $$('.card-popup-activateshift').show();
-  }
-});
+// myApp.onPageBeforeInit('index', function (page) {
+//   console.log('init ' + getAllUrlParams(document.URL).paid);
+//   if (getAllUrlParams(document.URL).paid === "1") {
+//     console.log('modal show' + getAllUrlParams(document.URL).paid);
+//     $$('.card-popup-activateshift').show();
+//   }
+// });
 
 $$('#showtoast').on('click', function(e) {
   $$('.card-popup-activateshift').hide();
