@@ -44,6 +44,10 @@
           <!-- Page, data-page contains page name-->
           <div data-page="index" class="page" id="index">
 
+            <div class="toast" style="display:none">
+              <p>Период активирован</p>
+            </div>
+
             <!-- popup windows -->
             <div class="card-popup-topup">
               <div class="c-bg"></div>
@@ -71,8 +75,8 @@
                 <div class="card-content-inner">
                   <p class="c-popup-p">Активируйте период</p>
                   <div class="card-popup__btn">
-                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">8 часов - 29 монет</a>
-                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">4 часа - 19 монет</a>
+                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">8 часов - 29 монет</a>
+                    <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">4 часа - 19 монет</a>
                     <a href="#" class="list-button c-button-link">Другие периоды <img src="img/Arrow.png" width="10"></a>
                   </div>
                 </div>
@@ -91,7 +95,7 @@
               <div class="list-block media-list">
                 <ul>
                   <li>
-                    <a href="#" class="item-link item-content open-popup">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Айталина</p>
@@ -106,7 +110,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Таня</p>
@@ -121,7 +125,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Евгений</p>
@@ -136,7 +140,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Аника</p>
@@ -151,7 +155,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Юлия</p>
@@ -166,7 +170,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Юля</p>
@@ -181,7 +185,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Анна</p>
@@ -196,7 +200,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Сергей</p>
@@ -211,7 +215,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Василий</p>
@@ -226,7 +230,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Костя</p>
@@ -241,7 +245,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Мария</p>
@@ -256,7 +260,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Вован</p>
@@ -271,7 +275,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">Любовь</p>
@@ -286,7 +290,7 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="item-link item-content">
+                    <a href="#" class="item-link item-content create-popup">
                       <div class="item-media">
                         <img src="img/User.png" width="44">
                         <p class="passname">вася</p>
@@ -420,7 +424,7 @@
             </div>
 
             <div class="card">
-              <div class="card-header no-border">Опции авто</div>
+              <div class="card-header no-border">Опции</div>
               <div class="card-content">
                 <div class="card-content-inner">
                   <div class="list-block">

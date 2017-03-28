@@ -205,3 +205,15 @@
 .instructions-img {
   width: 100%;
 }
+
+.toast {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 0 20px;
+  z-index: 10500;
+  transform: translateX(-50%);
+}
