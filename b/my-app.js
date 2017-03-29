@@ -1,5 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
+  template7Pages: true,
   init: false //Disable App's automatic initialization
 });
 
