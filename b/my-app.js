@@ -15,7 +15,7 @@ var mainView = myApp.addView('.view-main', {
 myApp.onPageInit('index', function (page) {
   console.log(page.query.paid);
   if (page.query.paid == 1) {
-    $$('.card-popup-activateshift').show();
+    $('.toast').fadeIn(400).delay(3000).fadeOut(400);
   }
 
   if (page.query.tab == 3) {
@@ -39,11 +39,11 @@ myApp.onPageInit('index', function (page) {
     $$('.card-popup-activateshift').hide();
   });
 
-  $$('.showtoast').on('click', function(e) {
-    e.preventDefault();
-    $$('.card-popup-activateshift').hide();
-    $('.toast').fadeIn(400).delay(3000).fadeOut(400)
-  });
+  // $$('.showtoast').on('click', function(e) {
+  //   e.preventDefault();
+  //   $$('.card-popup-activateshift').hide();
+  //   $('.toast').fadeIn(400).delay(3000).fadeOut(400)
+  // });
 
   $$('.button-arrow').on('click', function() {
     $$(this).hide();

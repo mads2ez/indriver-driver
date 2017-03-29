@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>inDriver</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="../css/framework7.ios.min.css">
+    <link rel="stylesheet" href="../css/framework7.ios.colors.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="../css/my-app.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+
+  </head>
+  <body class="theme-green">
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <!-- Right panel with cover effect-->
+
+    <!-- Views-->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class-->
+      <div class="view view-main">
+
+        <!-- Top Navbar-->
+        <div class="navbar" id="navbar">
+          <div class="navbar-inner">
+            <div class="left">
+              <a href="#" class="link icon-only open-panel"><img src="../img/Hamburger.png"/></a>
+            </div>
+            <div class="center"><img src="../img/inDriver-logo.png"></img></div>
+          </div>
+        </div>
+
+
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed toolbar-fixed">
+          <!-- Page, data-page contains page name-->
+          <div class="page" data-page="index"  id="index">
+
+            <div class="toast" style="display:none">
+              <p>Период активирован</p>
+            </div>
+
+            <!-- popup windows -->
+            <div class="card-popup-topup">
+              <div class="c-bg"></div>
+              <div class="card c-popup" id='card'>
+                <div class="card-header no-border c-popup-header">Ваш баланс: 5 монет</div>
+                <div class="card-content">
+                <div class="card-content-inner">
+                  <p class="c-popup-p">Чтобы начать работать, необходимо пополнить счет.<br>Выберите способ</p>
+                  <div class="card-popup__btn">
+                    <a href="payment-terminals.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">Платежный терминалы</a>
+                    <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">С баланса телефона</a>
+                    <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-bank">Банковская карта</a>
+                    <a href="#" class="button button-round button-arrow">Другие способы <img src="../img/Arrow.png" width="10"></a>
+                    <div class="hidden">
+                      <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">Евросеть/Связной</a>
+                      <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">Сбербанк Онлайн</a>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-popup-activateshift">
+              <div class="c-bg"></div>
+              <div class="card c-popup" id='card2'>
+                <!-- <div class="card-header no-border c-popup-header"></div> -->
+                <div class="card-content">
+                <div class="card-content-inner">
+                  <p class="c-popup-p">Чтобы начать работать, активируйте период</p>
+                  <div class="card-popup__btn">
+                    <p><a href="#tab3" class="tab-link button button-big button-round active two-lines-btn c-popup-btn showtoast" id="showtoast"><span>8 часов - 29 монет</span><br><span class="btn-label">Экономия - 20%</span></a></p>
+                    <p><a href="#tab3" class="tab-link button button-big button-round active two-lines-btn c-popup-btn showtoast" id="showtoast"><span>4 часа - 19 монет</span><br><span class="btn-label">Экономия - 10%</span></a></p>
+                    <p><a href="#" class="button button-round button-arrow">Другие периоды <img src="../img/Arrow.png" width="10"></a></p>
+                    <div class="hidden">
+                      <p><a href="#tab3" class="tab-link button button-big button-round active two-lines-btn c-popup-btn showtoast" id="showtoast"><span>14 часов - 39 монет</span><br><span class="btn-label">Экономия - 20%</span></a></p>
+                      <p><a href="#tab3" class="tab-link button button-big button-round active two-lines-btn c-popup-btn showtoast" id="showtoast"><span>1 час - 9 монет</span><br><span class="btn-label">Экономия - 10%</span></a></p>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Scrollable page content-->
+          <div class="page-content tabs infinite-scroll">
+
+            <div id="tab1" class="tab active">
+
+
+
+            <!-- Scrollable page content-->
+              <div class="list-block media-list">
+                <ul>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Айталина</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Дзержинского 54</div>
+                        </div>
+                        <div class="item-subtitle">Лермонтова 49</div>
+                        <div class="item-fare">140 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Таня</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">ТРК Туймаада</div>
+                        </div>
+                        <div class="item-subtitle">газовиков 30</div>
+                        <div class="item-fare">200 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Евгений</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Стадухина 63/1</div>
+                        </div>
+                        <div class="item-subtitle">Чернушевского 14</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Аника</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">пр ленина 16</div>
+                        </div>
+                        <div class="item-subtitle">Каландаришвили 12</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Юлия</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">26 Школа</div>
+                        </div>
+                        <div class="item-subtitle">Губина 14</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Юля</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Дзержинского 15/1</div>
+                        </div>
+                        <div class="item-subtitle">Кирова 9</div>
+                        <div class="item-fare">120 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Анна</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Мед Центр</div>
+                        </div>
+                        <div class="item-subtitle">Орджоникидзе 45/1</div>
+                        <div class="item-fare">150 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Сергей</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Курашова 35/5</div>
+                        </div>
+                        <div class="item-subtitle">Можайского 54/1</div>
+                        <div class="item-fare">150 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Василий</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">петра алексеева 03</div>
+                        </div>
+                        <div class="item-subtitle">горького 92</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Костя</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">мсх</div>
+                        </div>
+                        <div class="item-subtitle">Островского 16</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Мария</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Орджоникидзе 17</div>
+                        </div>
+                        <div class="item-subtitle">Петра Алексеева 4/2</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Вован</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">чернышевского 84</div>
+                        </div>
+                        <div class="item-subtitle">улуру молл</div>
+                        <div class="item-fare">200 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Любовь</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">стадион юность</div>
+                        </div>
+                        <div class="item-subtitle">Автодорожная 12</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">вася</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Павлика Морозова 2</div>
+                        </div>
+                        <div class="item-subtitle">Авиационная магазин рида</div>
+                        <div class="item-fare">150 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="item-link item-content create-popup">
+                      <div class="item-media">
+                        <img src="../img/User.png" width="44">
+                        <p class="passname">Жанна</p>
+                      </div>
+                      <div class="item-inner">
+                        <div class="item-title-row">
+                          <div class="item-title addr">Жорницкого 7/15</div>
+                        </div>
+                        <div class="item-subtitle">Парковая 65</div>
+                        <div class="item-fare">100 руб.</div>
+                      </div>
+                    </a>
+                  </li>
+
+
+                </ul>
+              </div>
+
+
+
+            </div>
+
+
+
+            <div id="tab2" class="tab">
+              <div class="tab-header">
+                <div class="pr-header">
+                  <div class="pr-header__priority">75,3<i class="icon demo-icon-4"><img src="../img/Rise.png" alt=""></i></div>
+                  <div class="pr-header__label">ваш приоритет</div>
+                </div>
+                <div class="pr-content">
+                  <div class="pr-left">
+                    <div class="pr-number">412</div>
+                    <div class="pr-text">поездок</div>
+                  </div>
+                  <div class="pr-center">
+                    <div class="pr-number">32</div>
+                    <div class="pr-text">оценок</div>
+                  </div>
+                  <div class="pr-right">
+                    <div class="pr-number">12</div>
+                    <div class="pr-text">монет</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card card-news">
+                <div class="card-header no-border">Новый вид для водительского режима!<span class="card-date">29.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">Добавили вкладки Приоритет, Оплата и Профиль для быстрого доступа. Ждем ваших отзывов!</div>
+                  <button class="card-button">Написать отзыв</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header no-border">Хорошо поработали!<span class="card-date">29.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">
+                    <p>Вы совершили 3 поездки<br>Получили 3 оценки<br>Ваш приоритет повысился на 0.2 балла</p>
+                    <p class="rating"><img src="../img/Good.png" alt=""><span>Афанасий</span><span><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""></span></p>
+                    <p class="rating-comment">Отлично!</p>
+                    <p class="rating"><img src="../img/Good-2.png" alt=""><span>Юля</span><span><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""></span></p>
+                    <p class="rating"><img src="../img/Bad-1.png" alt=""><span>Олег</span><span><img src="../img/Rating-star.png" alt=""></span></p>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header no-border">Отлично, так держать!<span class="card-date">28.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">
+                    <p>Вы совершили 3 поездки<br>Получили 3 оценки<br>Ваш приоритет повысился на 0.2 балла</p>
+                    <p class="rating"><img src="../img/Good.png" alt=""><span>Афанасий</span><span><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""></span></p>
+                    <p class="rating-comment">Отлично!</p>
+                    <p class="rating"><img src="../img/Good-2.png" alt=""><span>Юля</span><span><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""><img src="../img/Rating-star.png" alt=""></span></p>
+                    <p class="rating"><img src="../img/Bad-1.png" alt=""><span>Олег</span><span><img src="../img/Rating-star.png" alt=""></span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-header no-border">Андрей, вы прошли регистрациюю<span class="card-date">27.01.2017</span> </div>
+                <div class="card-content">
+                  <div class="card-content-inner">Начинайте зарабатывать с inDriver!</div>
+                  <p><button class="card-button">Написать отзыв</button></p>
+                </div>
+
+              </div>
+
+            </div>
+            <!-- <div class="infinite-scroll-preloader">
+              <div class="preloader"></div>
+            </div> -->
+
+        <div id="tab3" class="tab">
+        <!-- Scrollable page content-->
+          <div class="tab-header">
+            <div class="pr-header">
+              <div class="pr-header__priority">Активация периода на {{shift}} ч.</div>
+              <div class="pr-header__label">{{coins}} - {{rubles}}<br>Экономия 10%</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header no-border">Выберите способ оплаты</div>
+            <div class="card-content">
+              <div class="card-content-inner">
+                <a href="payment-terminals.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-terminal">Платежный терминалы</a>
+                <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-phone">С баланса телефона</a>
+                <a href="payment.html" class="button button-big button-round active form-from-json c-popup-btn" id="activate-bank">Банковская карта</a>
+                <a href="#" class="button button-round button-arrow">Другие способы <img src="../img/Arrow.png" width="10"></a>
+                <div class="hidden">
+                  <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">Евросеть/Связной</a>
+                  <a href="#" class="button button-big button-round active form-from-json c-popup-btn" id="showtoast">Сбербанк Онлайн</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p><a href="#" class="button button-round no-arrow">История платежей</a></p>
+          <p><a href="#" class="button button-round no-arrow">Рекомендуемые правила</a></p>
+
+        </div>
+
+        <div id="tab4" class="tab">
+        <!-- Scrollable page content-->
+            <div class="card facebook-card">
+              <div class="card-header no-border fb-card">
+                <div class="facebook-avatar"><img class="driver-photo" src="../img/driver.jpg" width="34" height="34"></div>
+                <div class="facebook-name">Захаров Поликарп	</div>
+              </div>
+              <div class="card-content">
+                <div class="card-content-inner">Toyota Land Cruiser Prado, черный, А001АА</div>
+                <button class="card-button">Редактировать</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header no-border">Опции</div>
+              <div class="card-content">
+                <div class="card-content-inner">
+                  <div class="list-block">
+                    <ul>
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Микроавтобус</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Детское кресло</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Кондиционер</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+
+                      <li>
+                        <div class="item-content">
+                          <div class="item-inner">
+                            <div class="item-title label">Не курю</div>
+                            <div class="item-input">
+                              <label class="label-switch">
+                                <input type="checkbox">
+                                <div class="checkbox"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+</div>
+
+<div class="toolbar tabbar tabbar-labels">
+  <div class="toolbar-inner">
+      <a href="#tab1" class="tab-link active">
+          <i class="icon demo-icon-1"><img id="tab-img__list" src="../img/List.png" alt=""></i>
+          <span class="tabbar-label">Заказы</span>
+      </a>
+      <a href="#tab2" class="tab-link">
+          <i class="icon demo-icon-2"><img id="tab-img__prior" src="../img/Priority.png" alt=""></i>
+          <span class="tabbar-label">Приоритет</span>
+      </a>
+      <a href="#tab3" class="tab-link">
+          <i class="icon demo-icon-3"><img id="tab-img__pay" src="../img/Pay.png" alt=""></i>
+          <span class="tabbar-label">Оплата</span>
+      </a>
+      <a href="#tab4" class="tab-link">
+          <i class="icon demo-icon-4"><img id="tab-img__car" src="../img/Car.png" alt=""></i>
+          <span class="tabbar-label">Профиль</span>
+      </a>
+  </div>
+</div>
+        </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="../js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="my-app.js"></script>
+  </body>
+</html>
