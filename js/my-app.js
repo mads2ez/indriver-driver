@@ -30,7 +30,7 @@ myApp.onPageInit('index', function (page) {
 
   $$('.create-popup').on('click', function (e) {
     e.preventDefault();
-    $$('.card-popup-activateshift').show();
+    $$('.card-popup-topup').show();
   });
 
   $$('.c-bg').on('click', function (e) {
